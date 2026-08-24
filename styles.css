@@ -304,9 +304,10 @@ section { padding-block: clamp(64px, 9vw, 120px); }
   border-radius: 12px;
   background: var(--bg-2);
   display: grid; place-items: center;
-  font-size: 22px; color: var(--gold);
+  color: var(--gold);
   margin-bottom: 18px;
 }
+.feature .ic svg { width: 22px; height: 22px; }
 .feature h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
 .feature p { color: var(--muted); font-size: 15px; }
 .feature.tall { grid-row: span 2; background: var(--fg); color: var(--bg); }
@@ -348,7 +349,14 @@ section { padding-block: clamp(64px, 9vw, 120px); }
   padding: 22px;
   background: var(--surface);
 }
-.use .emoji { font-size: 24px; }
+.use .emoji {
+  width: 40px; height: 40px;
+  border-radius: 11px;
+  background: var(--bg-2);
+  display: grid; place-items: center;
+  color: var(--fg);
+}
+.use .emoji svg { width: 22px; height: 22px; }
 .use h3 { font-size: 16px; font-weight: 600; margin: 12px 0 6px; }
 .use p { font-size: 14px; color: var(--muted); }
 
