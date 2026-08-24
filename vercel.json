@@ -1,23 +1,29 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
   "headers": [
     {
-      "source": "/(.*).html",
+      "source": "/(.*)\\.html",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" },
         { "key": "Content-Disposition", "value": "inline" }
       ]
     },
     {
-      "source": "/",
+      "source": "/(.*)\\.(svg|svgz)",
       "headers": [
-        { "key": "Content-Type", "value": "text/html; charset=utf-8" },
+        { "key": "Content-Type", "value": "image/svg+xml" },
+        { "key": "Content-Disposition", "value": "inline" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.png",
+      "headers": [
+        { "key": "Content-Type", "value": "image/png" },
         { "key": "Content-Disposition", "value": "inline" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/favicon.png", "destination": "/favicon.svg" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/support", "destination": "/support.html" }
   ]
